@@ -3,20 +3,25 @@ import Link from 'next/link';
 
 export default function Footer() {
     return (
-        <div className="mt-auto border-black/10 border-t h-[200px] px-5">
+        <div className="mt-auto border-black/10 border-t h-[200px] px-20 py-5">
             <div className="flex justify-between items-center">
                 <div className="flex">
-                    <Image
+                    <div className="mr-5">
+                        <Image
                         src="/Eskolhub Full Lockup Primary Color.png"
                         alt="Eskolhub Logo"
                         width={100}
                         height={20}
-                    />
-                    <ul>
-                        <li>Instagram</li>
-                        <li>Facebook</li>
-                        <li>Twitter</li>
-                    </ul>
+                        />
+                    </div>
+                    <div>
+                        <ul>
+                            <Link href="/"><i className="ri-instagram-fill"></i></Link>
+                            <Link href="/"><i className="ri-facebook-box-fill"></i></Link>
+                            <Link href="/"><i className="ri-linkedin-box-fill"></i></Link>
+                        </ul>
+                    </div>
+                
                 </div>
                 <div className="flex">
                     <div>
@@ -44,7 +49,8 @@ export default function Footer() {
                     </div>
                 </div>
             </div>
-            <div className="flex justify-center">
+            <br className="border-black/10 border-t"/>
+            <div className="">
                 <p>© 2023 Eskolhub. All rights reserved.</p>
             </div>
             

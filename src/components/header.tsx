@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export default function Header() {
   return (
-    <div className="border-black/10 border-b h-[40px] flex items-center justify-between px-5">
+    <div className="border-black/10 border-b h-[80px] flex items-center justify-between px-5">
         <div>
           <Image
             src="/Eskolhub Full Lockup Primary Color.png"
@@ -23,7 +23,7 @@ export default function Header() {
           </ul>
         </div>
         <div>
-          <button className="bg-blue-500 text-white px-3 py-1 rounded-md">Sign In</button>
+          <button className="bg-[#0F1932] text-white px-[24px] h-[48px] rounded-[8px]">Request Live Demo</button>
         </div>
     </div>
   );

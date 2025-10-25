@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export default function Header() {
   return (
-    <div className="flex items-center justify-between px-40 h-[80px] border-b border-black/10">
+    <div className="flex items-center justify-between px-[40px] h-[80px] border-b border-black/10">
         <div>
           <Image
             src="/Eskolhub Full Lockup Primary Color.png"

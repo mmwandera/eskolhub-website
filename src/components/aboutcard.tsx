@@ -8,9 +8,9 @@ interface AboutCardProps {
 
 export default function AboutCard({ icon, title, text }: AboutCardProps) {
   return (
-    <div className="flex items-start gap-6">
+    <div>
       {/* Icon container */}
-      <div className="w-14 h-14 bg-[#0F1932] flex items-center justify-center rounded-md shrink-0">
+      <div className="w-14 h-14 bg-[#0F1932] flex items-center justify-center rounded-md shrink-0 mb-4">
         <i className={`${icon} text-[24px] text-white`} />
       </div>
 

@@ -1,31 +1,39 @@
+// src/components/hero.tsx
 import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="relative w-full h-screen bg-[#0F1932] px-6 py-6 flex flex-col items-center justify-center text-center overflow-hidden">
-      <div className="max-w-3xl mx-auto z-10">
-        <h1 className="text-white text-5xl font-bold leading-tight mb-6">
-          Everything Your School Needs. All in One Place.
-        </h1>
-        <p className="text-[#E0E0E0] text-lg mb-8">
-          E-Skolhub is an online school management system software that simplifies
-          the institute&apos;s academic and administrative process effortlessly.
-        </p>
-        <button className="bg-[#E5FE70] text-[#0F1932] font-semibold text-lg px-8 py-3 rounded-xl hover:opacity-90 transition-all">
-          Request Live Demo
-        </button>
-      </div>
+    <section className="relative my-6 mx-6 bg-[#0F1932] rounded-2xl flex flex-col items-center justify-center text-center px-8 py-24 text-white overflow-visible">
+      <h1 className="text-[72px] font-semibold leading-tight">
+        Everything Your School <br />
+        <span className="text-[#E5FE70]">Needs</span>. All in{" "}
+        <span className="text-[#E5FE70]">One Place.</span>
+      </h1>
 
-      {/* Hero image positioned 326px from bottom */}
-      <div className="absolute bottom-[-326px] left-1/2 transform -translate-x-1/2">
+      <p className="text-[18px] font-semibold max-w-3xl mt-6">
+        E-Skolhub is an online school management system software that simplifies
+        the institute&apos;s academic & administrative process effortlessly.
+      </p>
+
+      <button
+        className="mt-10 w-[247px] h-[52px] bg-[#E5FE70] text-[#0F1932] font-semibold rounded-lg hover:opacity-90 transition"
+      >
+        Request Live Demo
+      </button>
+
+      {/* Hero Illustration */}
+      <div className="absolute left-1/2 -translate-x-1/2 bottom-[-25%]">
         <Image
           src="/hero-illustration.png"
-          alt="E-Skolhub dashboard"
-          width={987}
-          height={658}
-          priority
+          alt="E-Skolhub Illustration"
+          width={1200}
+          height={600}
+          className="object-contain"
         />
       </div>
+
+      {/* Spacer to push footer down */}
+      <div className="h-[300px]" />
     </section>
   );
 }

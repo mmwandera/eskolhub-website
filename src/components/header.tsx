@@ -4,27 +4,45 @@ import Image from 'next/image';
 export default function Header() {
   return (
     <div className="flex items-center justify-between px-[40px] h-[80px] border-b border-black/10">
-        <div>
-          <Image
-            src="/Eskolhub Full Lockup Primary Color.png"
-            alt="Eskolhub Logo"
-            width={120}
-            height={60}
-          />
-        </div>
-        <div>
-          <ul className="flex items-center gap-8">
-            <li><Link href="/" className="font-bold size-[20px] text-[#0F1932]">Home</Link></li>
-            <li><Link href="/pricing" className="font-bold size-[20px] text-[#0F1932]">Pricing</Link></li>
-            <li><Link href="/faqs" className="font-bold size-[20px] text-[#0F1932]">FAQs</Link></li>
-            <li><Link href="/blog" className="font-bold size-[20px] text-[#0F1932]">Blog</Link></li>
-            <li><Link href="/features" className="font-bold size-[20px] text-[#0F1932]">Features</Link></li>
-            <li><Link href="/contact-us" className="font-bold size-[20px] text-[#0F1932]">Contact Us</Link></li>
-          </ul>
-        </div>
-        <div>
-          <button className="bg-[#0F1932] text-white px-[16px] h-[48px] rounded-[8px] font-bold w-[201px]">Request Live Demo</button>
-        </div>
+      {/* Logo */}
+      <div>
+        <Image
+          src="/Eskolhub Full Lockup Primary Color.png"
+          alt="Eskolhub Logo"
+          width={120}
+          height={60}
+        />
+      </div>
+
+      {/* Navigation */}
+      <div>
+        <ul className="flex items-center gap-2">
+          {[
+            { href: '/', label: 'Home' },
+            { href: '/pricing', label: 'Pricing' },
+            { href: '/faqs', label: 'FAQs' },
+            { href: '/blog', label: 'Blog' },
+            { href: '/features', label: 'Features' },
+            { href: '/contact-us', label: 'Contact Us' },
+          ].map((item) => (
+            <li key={item.href}>
+              <Link
+                href={item.href}
+                className="font-bold text-[16px] text-[#0F1932] px-4 py-2 rounded-md hover:bg-[#E5FE70] transition-colors duration-300"
+              >
+                {item.label}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      {/* Button */}
+      <div>
+        <button className="bg-[#0F1932] text-white px-[16px] h-[48px] rounded-[8px] font-bold w-[201px] hover:bg-[#1a2750] transition-colors duration-300">
+          Request Live Demo
+        </button>
+      </div>
     </div>
   );
 }

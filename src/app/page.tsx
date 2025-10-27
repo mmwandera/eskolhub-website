@@ -4,6 +4,7 @@ import FeatureTour from "@/components/featuretour";
 import PricingSection from "@/components/pricingsection";
 import PartnersSection from "@/components/partnerssection";
 import TestimonialSection from "@/components/testimonials/testimonialsection";
+import FAQSection from "@/components/faqsection";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <PricingSection />
       <PartnersSection />
       <TestimonialSection />
+      <FAQSection />
     </>
   );
 }
